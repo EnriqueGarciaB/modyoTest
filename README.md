@@ -1,24 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Memory Game
 
-## Getting Started
+### Descripción
 
-First, run the development server:
+Un juego de memoria interactivo donde los jugadores deben emparejar cartas con imágenes de animales. El juego se adapta a diferentes tamaños de pantalla para garantizar una buena experiencia tanto en dispositivos móviles como en pantallas de escritorio.
+
+
+### Requisitos
+
+- React: Usado para construir la aplicación.
+- Next.js: Utilizado para la construcción y el renderizado del lado del servidor.
+- CSS: Estilos personalizados para la cuadrícula y las cartas del juego.
+
+
+### Funcionalidad
+
+- El jugador ingresa su nombre, que se guarda en localStorage.
+- El tablero muestra cartas con imágenes de animales que deben ser emparejadas.
+- Cada vez que el jugador voltea dos cartas, el juego verifica si son iguales. Si lo son, se marcan como emparejadas. Si no, se ocultan nuevamente.
+- El jugador ve estadísticas en tiempo real sobre el número de turnos y errores cometidos.
+- El juego incluye un mensaje de victoria cuando todas las cartas han sido emparejadas.
+
+### Estilos Responsivos
+
+- El diseño del juego se adapta a dispositivos móviles utilizando media queries.
+- El tamaño de las cartas y la disposición de la cuadrícula se ajustan dinámicamente en función del tamaño de la pantalla.
+
+### Cómo Jugar
+
+- Ingrese su nombre cuando se le solicite.
+- El objetivo es emparejar las cartas con las mismas imágenes.
+- Para voltear una carta, simplemente haga clic sobre ella.
+- El juego registra el número de turnos y errores cometidos.
+- Cuando todas las cartas se emparejan correctamente, verá un mensaje de victoria.
+
+### API
+
+El juego obtiene imágenes de una API externa para mostrar las cartas. Los datos se obtienen de la siguiente URL:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=10
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
